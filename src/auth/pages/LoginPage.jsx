@@ -29,7 +29,7 @@ export const LoginPage = () => {
         dispatch(checkingSignInFromGoogle())
     }
 
-    ///probando cambios
+
     return (
         <AuthLayout title='Login!!!'>
             <form onSubmit={onSubmit} className='animate__animated animate__fadeIn animate__faster'>
