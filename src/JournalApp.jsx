@@ -3,7 +3,7 @@ import { AppTheme } from "./theme"
 
 export const JournalApp = () => {
     return (
-        //probando
+
         <AppTheme>
             <AppRouter />
         </AppTheme>
