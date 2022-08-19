@@ -3,7 +3,7 @@ import { Box } from '@mui/system'
 import { NavBar, SideBar } from '../components';
 
 
-const drawerWidth = 240;
+const drawerWidth = 300;
 
 export const JournalLayout = ({ children }) => {
     return (
