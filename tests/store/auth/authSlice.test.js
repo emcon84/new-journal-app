@@ -1,6 +1,7 @@
 import { authSlice, checkingCredential, login, logout } from '../../../src/store/auth/authSlice'
 import { authenticatedState, demoUser, initialState } from '../../fixtures/authFixtures';
 
+//testeandoooo
 
 describe('Pruebas en authSlice', () => {
 
