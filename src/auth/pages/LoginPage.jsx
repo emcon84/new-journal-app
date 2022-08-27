@@ -5,7 +5,7 @@ import { Alert, Button, Grid, Link, TextField, Typography } from "@mui/material"
 import { AuthLayout } from '../layout/AuthLayout'
 import { useForm } from '../../hooks'
 import { useDispatch, useSelector } from 'react-redux';
-import { checkingSignInFromGoogle, startLoginWithEmailPassword } from '../../store/auth'
+import { startGoogleSignIn, startLoginWithEmailPassword } from '../../store/auth'
 
 
 const formData = {
@@ -29,7 +29,7 @@ export const LoginPage = () => {
     }
 
     const singInFromGoogle = () => {
-        dispatch(checkingSignInFromGoogle())
+        dispatch(startGoogleSignIn())
     }
 
 
