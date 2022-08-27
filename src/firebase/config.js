@@ -2,8 +2,9 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth'
 import { getFirestore } from 'firebase/firestore/lite'
+import { getEnviroments } from '../helpers/getEnviroments';
 
-//dev / prod
+// dev / prod
 // const firebaseConfig = {
 //     apiKey: "AIzaSyDghNwtWp4W1BGK8nFg6Q3Y5VAwSbNZDD4",
 //     authDomain: "react-app-journal-86f55.firebaseapp.com",
@@ -15,16 +16,30 @@ import { getFirestore } from 'firebase/firestore/lite'
 
 //testing
 
+const {
+    VITE_APIKEY,
+    VITE_AUTHDOMAIN,
+    VITE_PROJECTID,
+    VITE_STORAGEBUCKET,
+    VITE_MESSAGINGSENDERID,
+    VITE_APPID,
+    VITE_MEASUREMENTID
+} = getEnviroments();
+
+
+
+
 const firebaseConfig = {
-    apiKey: "AIzaSyDzQjviCQP_XA2V488Wqzq_gTRFb7PwBWU",
-    authDomain: "jump-a2f3f.firebaseapp.com",
-    projectId: "jump-a2f3f",
-    storageBucket: "jump-a2f3f.appspot.com",
-    messagingSenderId: "632189075311",
-    appId: "1:632189075311:web:504c3a4e9a9dca2c59f29a",
-    measurementId: "G-NBNC4J0DF6"
+    apiKey: VITE_APIKEY,
+    authDomain: VITE_AUTHDOMAIN,
+    projectId: VITE_PROJECTID,
+    storageBucket: VITE_STORAGEBUCKET,
+    messagingSenderId: VITE_MESSAGINGSENDERID,
+    appId: VITE_APPID,
+    measurementId: VITE_MEASUREMENTID
 };
 
+console.log(firebaseConfig)
 
 export const FirebaseApp = initializeApp(firebaseConfig);
 export const FirebaseAuth = getAuth(FirebaseApp);
